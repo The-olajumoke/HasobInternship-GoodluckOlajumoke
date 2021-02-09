@@ -1,0 +1,85 @@
+body{
+    background-color: grey;
+text-align: center;
+
+
+}
+
+form{
+    background-color: white;
+    width: 50%;
+    margin:30px auto;
+    padding: 3%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form__email, .form__password{
+    padding: 20px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: rgb(235, 232, 232);
+    border: none;
+}
+.form__email:focus, .form__password:focus{
+    border: 1px solid orangered;
+    outline: orangered;
+}
+.password__div{
+    position: relative;
+}
+
+.form__eye{
+    position: absolute;
+    padding: 0;
+    right:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: orangered;
+}
+input[type=checkbox]{
+         width: 15px !important;
+        height: 15px !important;
+        outline: 2px solid orangered;
+        box-shadow: none;
+        padding: 0;
+        font-size: 2em;
+}
+.form__help{
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+}
+.forgotP, h2{
+    color: orangered;
+    font-weight: 600;
+}
+.forgotP{
+    margin: 0;
+}
+.form__button{
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(5, 5, 85);
+}
+.login{
+    background-color: orangered;
+
+}
+.form__icon{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    transform: scale(1.5);
+
+}
+@media(max-width:1000px){
+    form{
+        width: 85%;
+    }
+}
