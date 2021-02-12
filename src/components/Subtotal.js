@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import CurrencyFormat from "react-currency-format"
 import {useStateValue} from "./StateProvider"
 import {getBasketTotal} from "./reducer"
@@ -23,9 +24,12 @@ function Subtotal() {
               </div>
   
   <div className="btn-cont d-flex my-3 justify-content-end">
-      
+      <Link to="/">
         <button class="btn bg-light btn-purchase border" type="button">Continue Shopping</button>
+       </Link>
+        <Link to="/">
         <button class="btn btn-primary btn-purchase" type="button">Checkout</button>
+        </Link>
   </div>        
     </div>
     )
