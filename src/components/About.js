@@ -7,6 +7,8 @@ import DownArr from "@material-ui/icons/ArrowDownward"
 import  "./About.css"
 import {useParams} from "react-router-dom"
 import Products from "./../Product"
+import { useStateValue } from "./StateProvider";
+
 
 
 function About() {
@@ -15,6 +17,22 @@ function About() {
     
 
 let Product = Products.find(product => id == product.id ) ;
+
+const [{ basket }, dispatch] = useStateValue();
+const addToBasket = () => {
+    //add item to basket
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: Product.id,
+        image:Product.image,
+        name:Product.name,
+        description:Product.description,
+        price: Product.price,
+        brand:Product.brand,
+      },
+    });
+  };
 
     return (
         <div className="about">
@@ -42,7 +60,7 @@ let Product = Products.find(product => id == product.id ) ;
                     <span className="about__size">XL</span>
                 </div>
                 <h1 className="about__price font-weight-bold"> $ {Product.price}</h1>
-                <Button className="btn px-5 my-3">
+                <Button className="btn px-5 my-3" onClick={addToBasket}>
                     <ShoppingCartIcon  className="about__cart"/>
                       ADD TO CART
                 </Button>
