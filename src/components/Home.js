@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import SideNav from "./SideNav"
 import Products from "./../Product"
 import Item from "./Item"
