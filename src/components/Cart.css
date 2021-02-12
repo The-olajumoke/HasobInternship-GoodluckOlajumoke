@@ -80,9 +80,12 @@ body{
     width: 100%;
     align-items: center;
     justify-content: left;
+    cursor: pointer;
     }
 .cart__button:hover{
-    border:darkblue 1px solid
+    border:darkblue 1px solid;
+    cursor: pointer;
+
 }
 .cart-total {
     text-align: end;
